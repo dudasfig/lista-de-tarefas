@@ -1,0 +1,13 @@
+CREATE DATABASE lista_tarefas;
+
+\c lista_tarefas;
+
+CREATE TABLE tarefas (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL UNIQUE,
+    custo NUMERIC(10, 2) NOT NULL,
+    dataLimite DATE NOT NULL,
+    ordem INTEGER NOT NULL UNIQUE,
+    createdAt TIMESTAMP WITH TIME ZONE DEFAULT NOW() NOT NULL,
+    updatedAt TIMESTAMP WITH TIME ZONE DEFAULT NOW() NOT NULL
+);
