@@ -7,7 +7,8 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const tarefasRoutes = require("./routes/tarefas");
+const tarefasRoutes = require("./api/tarefas");
+
 app.use("/tarefas", tarefasRoutes);
 
 const PORT = process.env.PORT || 3001;
