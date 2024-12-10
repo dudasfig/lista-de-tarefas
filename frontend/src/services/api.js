@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3001", // Verifique se esta URL está correta
+  baseURL: "https://backend-lista-de-tarefas-pkey.onrender.com", // Verifique se esta URL está correta
 });
 
 export default api;
